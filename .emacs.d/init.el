@@ -1,4 +1,3 @@
-
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -14,8 +13,10 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
- '(custom-enabled-themes (quote (deeper-blue)))
- '(package-selected-packages (quote (evil shell-pop neotree ## async ox-twbs htmlize)))
+ '(custom-enabled-themes (quote (leuven)))
+ '(package-selected-packages
+   (quote
+    (simpleclip evil shell-pop neotree ## async ox-twbs htmlize)))
  '(safe-local-variable-values
    (quote
     ((org-download-heading-lvl)
@@ -62,6 +63,9 @@
 ;; Disable the splash screen (to enable it agin, replace the t with 0)
 (setq inhibit-splash-screen t)
 
+;; Prevent new buffers from splitting windows
+(setq pop-up-windows nil)
+
 ;; Enable transient mark mode
 (transient-mark-mode 1)
 
@@ -72,16 +76,22 @@
 ;; (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 ;; The above is the default in recent emacsen
 
-;; evil mode
+;; EVIL MODE
 (require 'evil)
   (evil-mode 1) 
+
+;; always yank to black hole
+(defun bb/evil-delete (orig-fn beg end &optional type _ &rest args)
+  (apply orig-fn beg end type ?_ args))
+(advice-add 'evil-delete :around 'bb/evil-delete)
 
 ;; save desktop on exit
 (desktop-save-mode 1)
 
 ;; neotree
-(global-set-key [f8] 'neotree-toggle) ; F8 to toogle
-(add-to-list 'load-path "~/shared/reports/htb/") ;to select windows
+(add-to-list 'load-path "/root/shared")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
 
 ;; use arrows to nav windows
 (global-set-key (kbd "C-x <up>") 'windmove-up)
@@ -95,23 +105,36 @@
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
-
 ;;; ORG MODE
 
+;; disable default inline styling
+;(setq org-html-head-include-default-style nil)
+
+;; set overflow to scroll for default inline styling
+(setq org-html-head "<style> .pre.src { overflow: scroll; !important} </style>")
+
 ;; pretty bullets
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+;(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 ;; org-download (image drag)
 (setq-default org-download-image-dir "./assets/images")
 (org-set-startup-visibility)
 
 
-;; <b <TAB> for bash code
+;; fontify code in code blocks
+(setq org-src-fontify-natively t)
+
+
+;; <b <TAB> for sh src
 (add-to-list 'org-structure-template-alist ;
-        '("b" "#+BEGIN_SRC shell :results output :exports both\n\n#+END_SRC" "<src lang=\"sh\">\n\n</src>"))
+        '("b" "#+BEGIN_SRC sh\n#+END_SRC" "<src lang=\"sh\">\n\n</src>"))
 
 ;; display images
 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images) 
 (add-hook 'org-mode-hook 'org-display-inline-images)
 (add-hook 'org-mode-hook 'org-babel-result-hide-all)
 
+;; editor syntax highlighting
+(setq org-src-fontify-natively t
+    org-src-preserve-indentation t
+    org-src-tab-acts-natively t)

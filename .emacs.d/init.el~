@@ -15,7 +15,9 @@
  '(ansi-color-names-vector
    ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
  '(custom-enabled-themes (quote (deeper-blue)))
- '(package-selected-packages (quote (shell-pop neotree ## async ox-twbs htmlize)))
+ '(package-selected-packages
+   (quote
+    (simpleclip evil shell-pop neotree ## async ox-twbs htmlize)))
  '(safe-local-variable-values
    (quote
     ((org-download-heading-lvl)
@@ -72,13 +74,24 @@
 ;; (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 ;; The above is the default in recent emacsen
 
+;; EVIL MODE
+(require 'evil)
+  (evil-mode 1) 
+
+;; always yank to black hole
+(defun bb/evil-delete (orig-fn beg end &optional type _ &rest args)
+  (apply orig-fn beg end type ?_ args))
+(advice-add 'evil-delete :around 'bb/evil-delete)
 
 ;; save desktop on exit
 (desktop-save-mode 1)
 
 ;; neotree
-(global-set-key [f8] 'neotree-toggle) ; F8 to toogle
-(add-to-list 'load-path "~/Documents") ;to select windows
+(add-to-list 'load-path "/root/shared")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
+;; use arrows to nav windows
 (global-set-key (kbd "C-x <up>") 'windmove-up)
 (global-set-key (kbd "C-x <down>") 'windmove-down)
 (global-set-key (kbd "C-x <left>") 'windmove-left)
@@ -90,15 +103,18 @@
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
-
 ;;; ORG MODE
 
 ;; pretty bullets
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+;(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 ;; org-download (image drag)
 (setq-default org-download-image-dir "./assets/images")
 (org-set-startup-visibility)
+
+
+;; fontify code in code blocks
+(setq org-src-fontify-natively t)
 
 
 ;; <b <TAB> for bash code
@@ -110,3 +126,7 @@
 (add-hook 'org-mode-hook 'org-display-inline-images)
 (add-hook 'org-mode-hook 'org-babel-result-hide-all)
 
+;; editor syntax highlighting
+(setq org-src-fontify-natively t
+    org-src-preserve-indentation t
+    org-src-tab-acts-natively t)

