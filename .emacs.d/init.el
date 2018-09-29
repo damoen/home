@@ -14,9 +14,10 @@
  '(ansi-color-names-vector
    ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
  '(custom-enabled-themes (quote (leuven)))
+ '(org-download-screenshot-method "gnome-screenshot -a -f %s")
  '(package-selected-packages
    (quote
-    (simpleclip evil shell-pop neotree ## async ox-twbs htmlize)))
+    (speed-type simpleclip evil shell-pop neotree ## async ox-twbs htmlize)))
  '(safe-local-variable-values
    (quote
     ((org-download-heading-lvl)
@@ -107,6 +108,9 @@
 
 ;;; ORG MODE
 
+;; show everything on startup
+(org-set-startup-visibility)
+
 ;; disable default inline styling
 ;(setq org-html-head-include-default-style nil)
 
@@ -118,7 +122,8 @@
 
 ;; org-download (image drag)
 (setq-default org-download-image-dir "./assets/images")
-(org-set-startup-visibility)
+;(setq-default org-download-timestamp "") ;does not seem to work
+(setq org-download-heading-lvl nil)
 
 
 ;; fontify code in code blocks
@@ -130,9 +135,14 @@
         '("b" "#+BEGIN_SRC sh\n#+END_SRC" "<src lang=\"sh\">\n\n</src>"))
 
 ;; display images
-(add-hook 'org-babel-after-execute-hook 'org-display-inline-images) 
-(add-hook 'org-mode-hook 'org-display-inline-images)
-(add-hook 'org-mode-hook 'org-babel-result-hide-all)
+(setq org-display-inline-images t) 
+(setq org-redisplay-inline-images t) 
+(setq org-startup-with-inline-images "inlineimages")
+
+(setq org-link-escape-chars
+  ;;%20 %5B %5D %25
+  '(?\[ ?\] ?%)
+  )
 
 ;; editor syntax highlighting
 (setq org-src-fontify-natively t
