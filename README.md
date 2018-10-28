@@ -10,4 +10,6 @@ reboot
 
 mount -t vboxsf <name_of_share> /path/to/mountpoint
 
-for persistence, add `<name_of_share>   /path/to/mountpoint   vboxsf   <options>  0   0` to /etc/fstab
+for persistence, add `<name_of_share>   /path/to/mountpoint   vboxsf  defaults  0   0` to /etc/fstab
+
+add `vboxsf` to /etc/modules
