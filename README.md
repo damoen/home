@@ -45,5 +45,6 @@ xmodmap .xmodmap
 ## Sublist3r
 git clone https://github.com/aboul3la/Sublist3r.git  
 cd Sublist3r  
-sudo pip install -r requirements.txt  
+sudo pip install -r requirements.txt
+pip install .
 
